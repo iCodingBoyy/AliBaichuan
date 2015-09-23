@@ -109,7 +109,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = ['WXFrameworks/WXOpenIMSDKResource.bundle','WXFrameworks/WXOUIModuleResources.bundle']
+  s.resources = ['WXFrameworks/WXOpenIMSDKResource.bundle','WXFrameworks/WXOUIModuleResources.bundle','WXFrameworks/*.jpg']
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
