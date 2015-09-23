@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/myz1104/AliBaichuan.git", :commit => "f058f605ac11f43d0860c8f44b81076caa54a9f4" }
 
-
+  s.xcconfig            = { "FRAMEWORK_SEARCH_PATHS" => "$(inherited)" }
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
