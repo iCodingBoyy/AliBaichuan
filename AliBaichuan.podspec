@@ -125,7 +125,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'ImageIO', 'SystemConfiguration', 'AddressBook', 'CoreLocation', 'CoreData', 'UIKit', 'AudioToolbox', 'MobileCoreServices','CoreTelephony','AVFoundation'
 
   # s.library   = "iconv"
-  s.libraries = 'libz', 'libstdc++.6.0.9'
+  s.libraries = 'z', 'stdc++.6.0.9'
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
