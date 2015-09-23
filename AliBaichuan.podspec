@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AliBaichuan"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "阿里百川IM"
 
   s.description  = <<-DESC
