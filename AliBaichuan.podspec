@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # s.license      = "MIT (example)"
+  s.license      = { :type => "Copyright", :text => "阿里百川 版权所有" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,13 +89,10 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-  s.default_subspec = 'Basic'
-  s.subspec "Basic" do |bs|
-    bs.vendored_frameworks = 'Basic/TencentOpenAPI.framework'
-    bs.source_files = 'Basic/TencentOpenAPI.framework/Headers/*.h'
-    tc_64.resource_bundles    = {
-      'TencentOpenAPI' => ['64Bit/TencentOpenApi_IOS_Bundle.bundle']
-    }
+  s.default_subspec = 'WXFrameworks'
+  s.subspec "WXFrameworks" do |bs|
+    bs.vendored_frameworks = 'WXFrameworks/SecurityGuardSDK.framework','WXFrameworks/UTMini.framework','WXFrameworks/UTDID.framework','WXFrameworks/WXOpenIMSDKFMWK.framework','WXFrameworks/WXOUIModule.framework',
+    bs.source_files = 'WXFrameworks/TencentOpenAPI.framework/**/*.h','WXFrameworks/UTMini.framework/**/*.h','WXFrameworks/UTDID.framework/**/*.h','WXFrameworks/WXOpenIMSDKFMWK.framework/**/*.h','WXFrameworks/WXOUIModule.framework/**/*.h',
   end
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
@@ -112,7 +109,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = ['WXFrameworks/WXOpenIMSDKResource.bundle','WXFrameworks/WXOUIModuleResources.bundle']
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
