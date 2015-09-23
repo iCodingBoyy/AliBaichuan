@@ -89,11 +89,16 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  s.source_files  = "WXFrameworks", "WXFrameworks/**/*.{h,m}"
+  s.default_subspec = 'WXFrameworks'
+  s.subspec "WXFrameworks" do |bs|
+    bs.vendored_frameworks = 'WXFrameworks/SecurityGuardSDK.framework','WXFrameworks/UTDID.framework','WXFrameworks/UTMini.framework','WXFrameworks/WXOpenIMSDKFMWK.framework','WXFrameworks/WXOUIModule.framework'
+    bs.source_files = 'WXFrameworks/SecurityGuardSDK.framework/Headers/*.h','WXFrameworks/UTDID.framework/Headers/*.h','WXFrameworks/UTMini.framework/Headers/*.h','WXFrameworks/WXOpenIMSDKFMWK.framework/Headers/*.h','WXFrameworks/WXOUIModule.framework/Headers/*.h'
+  end
+  
+  # s.source_files  = "WXFrameworks", "WXFrameworks/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "WXFrameworks/**/*.h"
+  # s.public_header_files = "WXFrameworks/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -129,7 +134,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = false
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
