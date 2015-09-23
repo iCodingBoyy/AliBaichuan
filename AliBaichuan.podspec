@@ -89,11 +89,11 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-  s.default_subspec = 'WXFrameworks'
-  s.subspec "WXFrameworks" do |bs|
-    bs.vendored_frameworks = 'WXFrameworks/SecurityGuardSDK.framework','WXFrameworks/UTMini.framework','WXFrameworks/UTDID.framework','WXFrameworks/WXOpenIMSDKFMWK.framework','WXFrameworks/WXOUIModule.framework',
-    bs.source_files = 'WXFrameworks/TencentOpenAPI.framework/**/*.h','WXFrameworks/UTMini.framework/**/*.h','WXFrameworks/UTDID.framework/**/*.h','WXFrameworks/WXOpenIMSDKFMWK.framework/**/*.h','WXFrameworks/WXOUIModule.framework/**/*.h',
-  end
+    s.default_subspec = 'WXFrameworks'
+    s.subspec "WXFrameworks" do |bs|
+      bs.vendored_frameworks = 'WXFrameworks/SecurityGuardSDK.framework','WXFrameworks/UTMini.framework','WXFrameworks/UTDID.framework','WXFrameworks/WXOpenIMSDKFMWK.framework','WXFrameworks/WXOUIModule.framework'
+      bs.source_files = 'WXFrameworks/TencentOpenAPI.framework/**/*.h','WXFrameworks/UTMini.framework/**/*.h','WXFrameworks/UTDID.framework/**/*.h','WXFrameworks/WXOpenIMSDKFMWK.framework/**/*.h','WXFrameworks/WXOUIModule.framework/**/*.h'
+    end
   # s.source_files  = "Classes", "Classes/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
