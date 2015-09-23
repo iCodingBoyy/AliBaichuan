@@ -92,7 +92,7 @@ Pod::Spec.new do |s|
   s.default_subspec = 'WXFrameworks'
   s.subspec "WXFrameworks" do |bs|
     bs.vendored_frameworks = 'WXFrameworks/SecurityGuardSDK.framework','WXFrameworks/UTDID.framework','WXFrameworks/UTMini.framework','WXFrameworks/WXOpenIMSDKFMWK.framework','WXFrameworks/WXOUIModule.framework'
-    bs.source_files = 'WXFrameworks/SecurityGuardSDK.framework/Headers/*.h','WXFrameworks/UTDID.framework/Headers/*.h','WXFrameworks/UTMini.framework/Headers/*.h','WXFrameworks/WXOpenIMSDKFMWK.framework/Headers/*.h','WXFrameworks/WXOUIModule.framework/Headers/*.h'
+    bs.source_files = 'WXFrameworks/SecurityGuardSDK.framework/**/*.h','WXFrameworks/UTDID.framework/**/*.h','WXFrameworks/UTMini.framework/**/*.h','WXFrameworks/WXOpenIMSDKFMWK.framework/**/*.h','WXFrameworks/WXOUIModule.framework/**/*.h'
   end
   
   # s.source_files  = "WXFrameworks", "WXFrameworks/**/*.{h,m}"
