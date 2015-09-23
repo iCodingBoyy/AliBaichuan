@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  # s.license      = "MIT (example)"
-  s.license      = { :type => "Copyright", :text => "阿里巴巴 版权所有" }
+  s.license      = "MIT (example)"
+  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,9 +79,9 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/myz1104/AliBaichuan.git", :commit => "f058f605ac11f43d0860c8f44b81076caa54a9f4" }
+  s.source       = { :git => "https://github.com/myz1104/AliBaichuan.git", :tag => "1.0.0" }
 
-  s.xcconfig            = { "FRAMEWORK_SEARCH_PATHS" => "$(inherited)" }
+
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
@@ -89,16 +89,11 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-  s.default_subspec = 'WXFrameworks'
-  s.subspec "WXFrameworks" do |bs|
-    bs.vendored_frameworks = 'WXFrameworks/SecurityGuardSDK.framework','WXFrameworks/UTDID.framework','WXFrameworks/UTMini.framework','WXFrameworks/WXOpenIMSDKFMWK.framework','WXFrameworks/WXOUIModule.framework'
-    bs.source_files = 'WXFrameworks/SecurityGuardSDK.framework/**/*.h','WXFrameworks/UTDID.framework/**/*.h','WXFrameworks/UTMini.framework/**/*.h','WXFrameworks/WXOpenIMSDKFMWK.framework/**/*.h','WXFrameworks/WXOUIModule.framework/**/*.h'
-  end
-  
-  # s.source_files  = "WXFrameworks", "WXFrameworks/**/*.{h,m}"
-  # s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "WXFrameworks/**/*.h"
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
+
+  # s.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -110,7 +105,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = ["WXFrameworks/WXOpenIMSDKResource.bundle","WXFrameworks/WXOUIModuleResources"]
+  # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -122,10 +117,10 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = 'ImageIO', 'SystemConfiguration', 'AddressBook', 'CoreLocation', 'CoreData', 'UIKit', 'AudioToolbox', 'MobileCoreServices','CoreTelephony','AVFoundation'
+  # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
-  s.libraries = 'z', 'stdc++.6.0.9'
+  # s.libraries = "iconv", "xml2"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -134,7 +129,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
+  # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
